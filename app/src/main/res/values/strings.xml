@@ -11,4 +11,5 @@
     <string name="menu_home">Home</string>
     <string name="menu_plans">Planes</string>
     <string name="menu_curses">Cursos</string>
+    <string name="menu_categories">Categorias</string>
 </resources>

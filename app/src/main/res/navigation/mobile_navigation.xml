@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_courses" />
 
     <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.dercide.codetera.ui.categories.CategoriesFragment"
+        android:label="@string/menu_categories"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
         android:id="@+id/nav_plans"
         android:name="com.dercide.codetera.ui.plans.PlansFragment"
         android:label="@string/menu_plans"
