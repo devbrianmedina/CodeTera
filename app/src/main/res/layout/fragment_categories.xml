@@ -12,14 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="10dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Categorias"
-            android:textStyle="bold"
-            android:textSize="32sp"
-            android:gravity="center"
-            android:layout_marginBottom="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,11 +56,11 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginBottom="5dp"
-                android:src="@drawable/book"/>
+                android:src="@drawable/ingeniero"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ciencias de la computación"
+                android:text="Ingenieria de Software"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -95,11 +87,11 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginBottom="5dp"
-                android:src="@drawable/book"/>
+                android:src="@drawable/info"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ciencias de la computación"
+                android:text="Software de Información"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textColor="@color/black"
@@ -126,11 +118,11 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginBottom="5dp"
-                android:src="@drawable/book"/>
+                android:src="@drawable/web"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ciencias de la computación"
+                android:text="Gestión web"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:textColor="@color/black"
