@@ -13,4 +13,6 @@
     <string name="menu_curses">Cursos</string>
     <string name="menu_categories">Categorias</string>
     <string name="menu_contact">Contacto</string>
+    <string name="payment_options">Opciones de pago</string>
+    <string name="add_card">Agregar tarjeta</string>
 </resources>

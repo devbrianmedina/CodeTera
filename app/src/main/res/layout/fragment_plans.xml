@@ -61,6 +61,7 @@
                 android:layout_marginBottom="20dp"/>
 
             <Button
+                android:id="@+id/btnPlan1Plans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:strokeColor="@color/teal_500"
