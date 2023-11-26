@@ -50,4 +50,5 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }
