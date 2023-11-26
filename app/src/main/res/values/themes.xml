@@ -12,6 +12,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <!-- Estilo para el botón de regreso -->
+        <item name="colorControlNormal">#FFFFFF</item>
     </style>
 
     <style name="Theme.CodeTera.NoActionBar">
