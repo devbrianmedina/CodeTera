@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="Estamos abiertos a cualquier sugerencia o simplemente charlar."
             android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:text="Calle Ocampo #42, Ciudad Salvatierra, Estado Guanajuato, Codigo postal: 38900 México"
             android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:text="contacto@dercide.com"
             android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:text="+52 123 123 1212"
             android:textSize="18sp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="20dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -84,7 +84,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="20dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -93,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Asunto"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="20dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mensaje"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="20dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
