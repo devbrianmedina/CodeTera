@@ -15,6 +15,26 @@
         android:theme="@style/Theme.CodeTera"
         tools:targetApi="31">
         <activity
+            android:name=".ui.coursedetails.CourseDetailsActivity"
+            android:exported="true"
+            android:label="@string/course_details"
+            android:theme="@style/Theme.CodeTera.NoActionBar" />
+        <activity
+            android:name=".ui.paymentconfirmation.PaymentConfirmationActivity"
+            android:exported="true"
+            android:label="@string/payment_confirmation"
+            android:theme="@style/Theme.CodeTera.NoActionBar" />
+        <activity
+            android:name=".ui.about.AboutActivity"
+            android:exported="true"
+            android:label="@string/action_about"
+            android:theme="@style/Theme.CodeTera.NoActionBar" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="true"
+            android:label="@string/action_settings"
+            android:theme="@style/Theme.CodeTera.NoActionBar" />
+        <activity
             android:name=".ui.addcard.AddCardActivity"
             android:exported="true"
             android:label="@string/add_card"

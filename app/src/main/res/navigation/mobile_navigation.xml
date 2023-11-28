@@ -18,6 +18,12 @@
         tools:layout="@layout/fragment_courses" />
 
     <fragment
+        android:id="@+id/nav_search"
+        android:name="com.dercide.codetera.ui.search.SearchFragment"
+        android:label="@string/menu_search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
         android:id="@+id/nav_categories"
         android:name="com.dercide.codetera.ui.categories.CategoriesFragment"
         android:label="@string/menu_categories"
@@ -34,4 +40,10 @@
         android:name="com.dercide.codetera.ui.contact.ContactFragment"
         android:label="@string/menu_contact"
         tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_feedback"
+        android:name="com.dercide.codetera.ui.feedback.FeedbackFragment"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment_feedback" />
 </navigation>

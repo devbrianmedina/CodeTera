@@ -5,7 +5,8 @@
     <string name="nav_header_title">Code Tera</string>
     <string name="nav_header_subtitle">contacto@dercide.com</string>
     <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_about">Acerca de</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="menu_home">Home</string>
@@ -15,4 +16,8 @@
     <string name="menu_contact">Contacto</string>
     <string name="payment_options">Opciones de pago</string>
     <string name="add_card">Agregar tarjeta</string>
+    <string name="menu_feedback">Comentarios</string>
+    <string name="menu_search">Buscar</string>
+    <string name="payment_confirmation">Pago Confirmado</string>
+    <string name="course_details">Detalles del curso</string>
 </resources>

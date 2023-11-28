@@ -3,10 +3,12 @@ package com.dercide.codetera.ui.payment
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.widget.Toolbar
 import com.dercide.codetera.R
 import com.dercide.codetera.ui.addcard.AddCardActivity
+import com.dercide.codetera.ui.paymentconfirmation.PaymentConfirmationActivity
 
 class PaymentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +26,12 @@ class PaymentActivity : AppCompatActivity() {
 
         llAdd.setOnClickListener {
             val intent = Intent(this, AddCardActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnPay:Button = findViewById(R.id.btnPayPayment)
+        btnPay.setOnClickListener {
+            val intent = Intent(this, PaymentConfirmationActivity::class.java)
             startActivity(intent)
         }
     }

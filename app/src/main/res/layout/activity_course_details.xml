@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.coursedetails.CourseDetailsActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@color/white"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Imagen principal del curso -->
+            <ImageView
+                android:id="@+id/imageCourse"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/banner_home"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Título del curso -->
+            <TextView
+                android:id="@+id/textCourseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Curso"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Descripción del curso -->
+            <TextView
+                android:id="@+id/textCourseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción del Curso..."
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Creador del curso -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/fernanda"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:id="@+id/textCreatorInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre del Creador\nCreador de Contenido"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Detalles adicionales del curso (temas, horas, etc.) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Temas: 10 | Horas: 20"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Calificación del curso con estrellas -->
+            <RatingBar
+                android:id="@+id/ratingCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:rating="3.5"/>
+
+            <!-- Comentarios sobre el curso -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Comentarios"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Puedes usar un RecyclerView para mostrar una lista de comentarios -->
+            <!-- Aquí solo se muestra un ejemplo de un comentario estático -->
+            <!-- Creador del curso -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/fernanda"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comentario..."
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Otros elementos y detalles del curso aquí -->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
