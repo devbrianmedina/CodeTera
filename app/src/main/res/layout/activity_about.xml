@@ -35,7 +35,7 @@
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:src="@drawable/fernanda"
+                    android:src="@drawable/brian"
                     android:layout_margin="10dp"/>
 
                 <TextView
