@@ -38,7 +38,7 @@
                 android:id="@+id/textCourseTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre del Curso"
+                android:text="Aprende Python Basico"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
@@ -68,7 +68,7 @@
                     android:id="@+id/textCreatorInfo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nombre del Creador\nCreador de Contenido"
+                    android:text="Fernanda de Jesus Zarco Hurtado\nCreador de Contenido"
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
 
