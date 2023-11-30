@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.dercide.codetera.MainActivity
 import com.dercide.codetera.R
 import com.dercide.codetera.ui.course.CourseActivity
@@ -24,16 +25,9 @@ class CoursesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnFlutter:Button = view.findViewById(R.id.btnCurseFlutter)
-        btnFlutter.setOnClickListener {
-            val intent = Intent(requireContext(), CourseActivity::class.java)
-            startActivity(intent)
-        }
 
-        val llCourse:LinearLayout = view.findViewById(R.id.llCourseCourses)
-        llCourse.setOnClickListener {
-            val intent = Intent(requireContext(), CourseDetailsActivity::class.java)
-            startActivity(intent)
-        }
+        //recycler
+        val rvQueries: RecyclerView = view.findViewById(R.id.rvCoursesFragmentCourses)
+
     }
 }

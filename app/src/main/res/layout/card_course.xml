@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ivIconCardCourse"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:tintMode="multiply"
+                android:src="@drawable/ic_software_engenier"
+                app:tint="@color/teal_500" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+                <TextView
+                    android:id="@+id/tvNameCardCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fundamentos básicos de la ingeniería de software"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:layout_marginEnd="10dp"/>
+                <TextView
+                    android:id="@+id/tvRatingCardCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="★★★★★ (5.0)"
+                    android:textSize="22sp"
+                    android:textColor="@color/teal_500"
+                    android:layout_marginBottom="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civCreatorImageCardCourse"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/fernanda"/>
+                    <TextView
+                        android:id="@+id/tvCreatorNameCardCourse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="por Fernanda de Jesús"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:layout_marginStart="10dp"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvTopicsInfoCardCourse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50 temas (190 horas)"
+                    android:textSize="18sp"
+                    android:textColor="@color/teal_500"
+                    android:layout_marginBottom="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvPriceCardCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="$1200 todo el curso / $150 por mes"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_500"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"/>
+        <Button
+            android:id="@+id/btnJoinCardCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:strokeColor="@color/teal_500"
+            android:text="¡ENLÍSTATE AHORA!"
+            android:textSize="18sp"
+            app:cornerRadius="5dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
