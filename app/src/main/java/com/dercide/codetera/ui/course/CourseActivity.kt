@@ -13,6 +13,7 @@ import android.widget.SeekBar
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.dercide.codetera.MainActivity
 import com.dercide.codetera.R
 
 
@@ -94,6 +95,12 @@ class CourseActivity : AppCompatActivity() {
             seekBar.progress = 0
             progress2.progress = 0
         }
+
+        val idCourse: Int = intent.extras!!.getInt("idCourse")
+        val course = MainActivity.courses.find { it.id == idCourse }
+        if(idCourse <= 0 || course == null) finish()
+
+
     }
 
     private fun playVideo() {

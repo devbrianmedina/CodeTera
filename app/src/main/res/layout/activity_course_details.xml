@@ -26,7 +26,7 @@
 
             <!-- Imagen principal del curso -->
             <ImageView
-                android:id="@+id/imageCourse"
+                android:id="@+id/imgBannerCourseDetails"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:src="@drawable/banner_home"
@@ -35,7 +35,7 @@
 
             <!-- Título del curso -->
             <TextView
-                android:id="@+id/textCourseTitle"
+                android:id="@+id/tvNameCourseDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Aprende Python Basico"
@@ -45,7 +45,7 @@
 
             <!-- Descripción del curso -->
             <TextView
-                android:id="@+id/textCourseDescription"
+                android:id="@+id/tvDescriptionCourseDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Descripción del Curso..."
@@ -59,13 +59,13 @@
                 android:gravity="center_vertical">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civCreatorImgCourseDetails"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
-                    android:src="@drawable/fernanda"
-                    android:scaleType="centerCrop"/>
+                    android:src="@drawable/fernanda"/>
 
                 <TextView
-                    android:id="@+id/textCreatorInfo"
+                    android:id="@+id/tvCreatorDetailsCourseDetails"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Fernanda de Jesus Zarco Hurtado\nCreador de Contenido"
@@ -74,6 +74,7 @@
 
             <!-- Detalles adicionales del curso (temas, horas, etc.) -->
             <TextView
+                android:id="@+id/tvCourseDetailsCourseDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Temas: 10 | Horas: 20"
@@ -81,13 +82,15 @@
 
             <!-- Calificación del curso con estrellas -->
             <RatingBar
-                android:id="@+id/ratingCourse"
+                android:id="@+id/ratingCourseCourseDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:numStars="5"
                 android:stepSize="0.5"
-                android:rating="3.5"/>
+                android:rating="3.5"
+                android:clickable="false"
+                android:isIndicator="true"/>
 
             <!-- Comentarios sobre el curso -->
             <TextView
