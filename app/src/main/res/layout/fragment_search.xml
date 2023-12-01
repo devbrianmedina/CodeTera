@@ -16,135 +16,17 @@
         android:layout_margin="16dp"
         android:hint="Buscar cursos...">
 
-        <AutoCompleteTextView
+        <EditText
             android:id="@+id/autoCompleteTextViewSearch"
-            style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:singleLine="true"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Scrollview y contenedor de cursos -->
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCoursesFragmentSearch"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <!-- Curso 1 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginBottom="16dp">
-
-                <!-- Imagen del curso -->
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:src="@drawable/banner_home"
-                    android:scaleType="centerCrop"/>
-
-                <!-- Título del curso -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Título del Curso 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
-
-                <!-- Descripción breve del curso -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción breve del Curso 1..."
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"/>
-            </LinearLayout>
-
-            <!-- Curso 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginBottom="16dp">
-
-                <!-- Imagen del curso -->
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:src="@drawable/banner_home"
-                    android:scaleType="centerCrop"/>
-
-                <!-- Título del curso -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Título del Curso 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
-
-                <!-- Descripción breve del curso -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción breve del Curso 1..."
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"/>
-            </LinearLayout>
-
-            <!-- Curso 3 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/rounded_corners"
-                android:layout_marginBottom="16dp">
-
-                <!-- Imagen del curso -->
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="120dp"
-                    android:src="@drawable/banner_home"
-                    android:scaleType="centerCrop"/>
-
-                <!-- Título del curso -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Título del Curso 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"/>
-
-                <!-- Descripción breve del curso -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción breve del Curso 1..."
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="16dp"/>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
 
 </LinearLayout>

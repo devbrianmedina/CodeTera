@@ -14,13 +14,22 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.dercide.codetera.databinding.ActivityMainBinding
+import com.dercide.codetera.models.Comment
+import com.dercide.codetera.models.Course
+import com.dercide.codetera.models.Topic
+import com.dercide.codetera.models.Video
 import com.dercide.codetera.ui.about.AboutActivity
 import com.dercide.codetera.ui.settings.SettingsActivity
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    companion object {
+        val courses = ArrayList<Course>()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +56,10 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        courses.addAll(
+            arrayOf(generateRandomCourse(1), generateRandomCourse(2), generateRandomCourse(3), generateRandomCourse(4))
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -74,5 +87,84 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    fun generateRandomCourse(id: Int): Course {
+        val titleList = listOf("Curso de Programación", "Desarrollo Web Avanzado", "Introducción a Android")
+        val briefDescriptionList = listOf("Aprende desde cero", "Domina las tecnologías modernas", "Conviértete en un desarrollador Android")
+        val descriptionList = listOf("Descripción del curso 1", "Descripción del curso 2", "Descripción del curso 3")
+        val topicNamesList = listOf("Programación Básica", "Frameworks Web", "Desarrollo Mobile")
+        val videoNamesList = listOf("Video Introductorio", "Demostración Práctica", "Proyecto Final")
+        val creatorList = listOf("Carlos Sánchez", "Ana Morales", "Javier Fernández")
+        val creatorImgUrlList = listOf("https://randomuser.me/api/portraits/men/91.jpg", "https://randomuser.me/api/portraits/men/92.jpg", "https://randomuser.me/api/portraits/men/93.jpg")
+        val creatorJobList = listOf("Desarrollador Senior", "Experto en Web", "Ingeniero Android")
+        val commentNamesList = listOf("María Rodríguez", "Juan García", "Laura Martínez")
+        val commentList = listOf("¡Gran curso!", "Muy informativo", "Recomendado para principiantes")
+        val iconUrlList = arrayListOf<String>()
+        for(i:Int in 1..5) {
+            iconUrlList.add("https://patientflow.dercide.com/icons/icon$i.png")
+        }
+        val bannerUrlList = listOf("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjItMDczLWt6cGhnMjR1LmpwZw.jpg")
+        val videoUrlList = listOf("https://www.youtube.com/watch?v=CX9saA9W96M&list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&index=29", "https://www.youtube.com/watch?v=CX9saA9W96M&list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&index=28", "https://www.youtube.com/watch?v=CX9saA9W96M&list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&index=27")
+        val commentUrlList = listOf("https://randomuser.me/api/portraits/men/91.jpg", "https://randomuser.me/api/portraits/men/92.jpg", "https://randomuser.me/api/portraits/men/90.jpg")
+        val priceRange: ClosedRange<Double> = 50.0..150.0
+        val qualificationRange: ClosedRange<Double> = 1.0..5.0
+
+        val random = Random.Default
+
+        // Generar datos aleatorios
+        val title = titleList.random()
+        val briefDescription = briefDescriptionList.random()
+        val description = descriptionList.random()
+        val price = priceRange.start + (priceRange.endInclusive - priceRange.start) * random.nextDouble()
+        val qualification = qualificationRange.start + (qualificationRange.endInclusive - qualificationRange.start) * random.nextDouble()
+        val creator = creatorList.random()
+        val creatorImgUrl = creatorImgUrlList.random()
+        val creatorJob = creatorJobList.random()
+        val iconUrl = iconUrlList.random()
+        val bannerUrl = bannerUrlList.random()
+
+        // Generar videos
+        val videos = ArrayList<Video>()
+        repeat(random.nextInt(2, 5)) {
+            val videoName = videoNamesList.random()
+            val video = Video(it + 1, videoName, videoUrlList.random())
+            videos.add(video)
+        }
+
+        // Generar temas con videos
+        val topics = ArrayList<Topic>()
+        repeat(random.nextInt(2, 4)) {
+            val topicName = topicNamesList.random()
+            val topicVideos = videos.shuffled().take(random.nextInt(1, 3))
+            val topic = Topic(it + 1, topicName, ArrayList(topicVideos))
+            topics.add(topic)
+        }
+
+        // Generar comentarios
+        val comments = ArrayList<Comment>()
+        repeat(random.nextInt(3, 6)) {
+            val commentName = commentNamesList.random()
+            val commentText = commentList.random()
+            val comment = Comment(it + 1, commentName, commentText, commentUrlList.random())
+            comments.add(comment)
+        }
+
+        // Crear y devolver el curso
+        return Course(
+            id,
+            title,
+            briefDescription,
+            description,
+            topics,
+            price,
+            qualification,
+            creator,
+            creatorImgUrl,
+            creatorJob,
+            comments,
+            iconUrl,
+            bannerUrl
+        )
     }
 }

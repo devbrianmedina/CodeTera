@@ -1,5 +1,7 @@
 package com.dercide.codetera.adapters
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,12 +12,14 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dercide.codetera.R
 import com.dercide.codetera.models.Course
+import com.dercide.codetera.ui.course.CourseActivity
+import com.dercide.codetera.ui.coursedetails.CourseDetailsActivity
 import de.hdodenhof.circleimageview.CircleImageView
 import java.text.NumberFormat
 import java.util.Currency
 import java.util.Locale
 
-class CourseAdapter(courses:ArrayList<Course>, val onItemClick: (Course) -> Unit): RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
+class CourseAdapter(courses:ArrayList<Course>, val context: Context, val onItemClick: (Course) -> Unit): RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
 
     var courses:ArrayList<Course>
     init {
@@ -53,12 +57,10 @@ class CourseAdapter(courses:ArrayList<Course>, val onItemClick: (Course) -> Unit
         holder.name.text = courses[position].name
         val maxStars = 5
         val rating = courses[position].qualification
-        // Convierte el valor de calificación a estrellas
-        val starRating = (rating / maxStars * 100).toInt()  // Escala la calificación a un rango de 0 a 100
         // Formatea el texto con estrellas
-        val starText = "★".repeat(starRating) + "☆".repeat(maxStars - starRating)
+        val starText = "★".repeat(rating.toInt()) + "☆".repeat(maxStars - rating.toInt())
         // Asigna el texto al TextView
-        holder.rating.text = starText
+        holder.rating.text = "$starText (${String.format("%.1f", rating)})"
         Glide.with(holder.itemView).load(courses[position].creatorImgUrl).into(holder.creatorImage)
         holder.creatorName.text = "${courses[position].creator}\n${courses[position].creatorJob}"
         val topics = courses[position].topics
@@ -78,7 +80,9 @@ class CourseAdapter(courses:ArrayList<Course>, val onItemClick: (Course) -> Unit
         // Asignar el texto al TextView
         holder.price.text = formattedPrice
         holder.btnJoin.setOnClickListener {
-            //onItemClick.invoke(courses[position])
+            val intent = Intent(context, CourseActivity::class.java)
+            intent.putExtra("idCourse", it.id)
+            context.startActivity(intent)
         }
         holder.itemView.setOnClickListener {
             onItemClick.invoke(courses[position])
