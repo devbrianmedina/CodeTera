@@ -34,8 +34,8 @@
 
             <ImageView
                 android:id="@+id/playPauseButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_play" />
 
@@ -59,12 +59,14 @@
             android:orientation="vertical"
             android:layout_margin="10dp">
             <TextView
+                android:id="@+id/tvNameCourse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombre del curso"
                 android:textStyle="bold"
                 android:textSize="22sp"/>
             <TextView
+                android:id="@+id/tvDescriptionCourse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Descripcion del curso"

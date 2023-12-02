@@ -105,7 +105,7 @@ class MainActivity : AppCompatActivity() {
             iconUrlList.add("https://patientflow.dercide.com/icons/icon$i.png")
         }
         val bannerUrlList = listOf("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00MjItMDczLWt6cGhnMjR1LmpwZw.jpg")
-        val videoUrlList = listOf("https://www.youtube.com/watch?v=CX9saA9W96M&list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&index=29", "https://www.youtube.com/watch?v=CX9saA9W96M&list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&index=28", "https://www.youtube.com/watch?v=CX9saA9W96M&list=PLCKuOXG0bPi0sIn-nDsi7ma9OV6MEMkxj&index=27")
+        val videoUrlList = listOf("https://patientflow.dercide.com/icons/vid1.mp4", "https://patientflow.dercide.com/icons/vid2.mp4", "https://patientflow.dercide.com/icons/vid3.mp4")
         val commentUrlList = listOf("https://randomuser.me/api/portraits/men/91.jpg", "https://randomuser.me/api/portraits/men/92.jpg", "https://randomuser.me/api/portraits/men/90.jpg")
         val priceRange: ClosedRange<Double> = 50.0..150.0
         val qualificationRange: ClosedRange<Double> = 1.0..5.0

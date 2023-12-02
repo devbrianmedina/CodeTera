@@ -81,7 +81,7 @@ class CourseAdapter(courses:ArrayList<Course>, val context: Context, val onItemC
         holder.price.text = formattedPrice
         holder.btnJoin.setOnClickListener {
             val intent = Intent(context, CourseActivity::class.java)
-            intent.putExtra("idCourse", it.id)
+            intent.putExtra("idCourse", courses[position].id)
             context.startActivity(intent)
         }
         holder.itemView.setOnClickListener {

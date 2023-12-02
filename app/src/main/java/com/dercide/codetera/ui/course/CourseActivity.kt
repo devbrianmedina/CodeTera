@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.MediaController
 import android.widget.ProgressBar
 import android.widget.SeekBar
+import android.widget.TextView
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -33,9 +34,19 @@ class CourseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course)
 
+        val idCourse: Int = intent.extras!!.getInt("idCourse")
+        val course = MainActivity.courses.find { it.id == idCourse }
+        if(idCourse <= 0 || course == null) finish()
+
         // Configurar la Toolbar como ActionBar
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+
+        val tvName:TextView = findViewById(R.id.tvNameCourse)
+        val tvDescription:TextView = findViewById(R.id.tvDescriptionCourse)
+
+        tvName.text = course!!.name
+        tvDescription.text = course.briefDescription
 
         // Configurar el botón de regreso
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -47,8 +58,9 @@ class CourseActivity : AppCompatActivity() {
         progress2 = findViewById(R.id.progress2)
         controlsLayout = findViewById(R.id.controlsLayout)
 
-        val videoPath = "android.resource://" + packageName + "/" + R.raw.flutter_vid1
-        videoView.setVideoPath(videoPath)
+        //val videoPath = "android.resource://" + packageName + "/" + R.raw.flutter_vid1
+        //videoView.setVideoPath(videoPath)
+        videoView.setVideoURI(Uri.parse(course.topics.first().videos.first().url))
 
         videoView.setOnPreparedListener { mp: MediaPlayer? ->
             duration = mp!!.duration
@@ -95,12 +107,6 @@ class CourseActivity : AppCompatActivity() {
             seekBar.progress = 0
             progress2.progress = 0
         }
-
-        val idCourse: Int = intent.extras!!.getInt("idCourse")
-        val course = MainActivity.courses.find { it.id == idCourse }
-        if(idCourse <= 0 || course == null) finish()
-
-
     }
 
     private fun playVideo() {
