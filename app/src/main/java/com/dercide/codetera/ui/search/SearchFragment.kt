@@ -13,6 +13,7 @@ import com.dercide.codetera.MainActivity
 import com.dercide.codetera.R
 import com.dercide.codetera.adapters.CourseAdapter
 import com.dercide.codetera.models.Course
+import com.dercide.codetera.ui.course.CourseActivity
 import com.dercide.codetera.ui.coursedetails.CourseDetailsActivity
 import com.google.android.material.textfield.TextInputLayout
 
@@ -36,11 +37,15 @@ class SearchFragment : Fragment() {
         //recycler
         val rvCourses: RecyclerView = view.findViewById(R.id.rvCoursesFragmentSearch)
 
-        val adapter = CourseAdapter(courseSearch, requireContext()) {
+        val adapter = CourseAdapter(courseSearch, requireContext(), {
+            val intent = Intent(context, CourseActivity::class.java)
+            intent.putExtra("idCourse", it.id)
+            startActivity(intent)
+        }, {
             val intent = Intent(requireContext(), CourseDetailsActivity::class.java)
             intent.putExtra("idCourse", it.id)
             startActivity(intent)
-        }
+        })
 
         val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 

@@ -19,7 +19,7 @@ import java.text.NumberFormat
 import java.util.Currency
 import java.util.Locale
 
-class CourseAdapter(courses:ArrayList<Course>, val context: Context, val onItemClick: (Course) -> Unit): RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
+class CourseAdapter(courses:ArrayList<Course>, val context: Context, val onBtnClick: (Course) -> Unit, val onItemClick: (Course) -> Unit): RecyclerView.Adapter<CourseAdapter.CourseViewHolder>() {
 
     var courses:ArrayList<Course>
     init {
@@ -80,9 +80,7 @@ class CourseAdapter(courses:ArrayList<Course>, val context: Context, val onItemC
         // Asignar el texto al TextView
         holder.price.text = formattedPrice
         holder.btnJoin.setOnClickListener {
-            val intent = Intent(context, CourseActivity::class.java)
-            intent.putExtra("idCourse", courses[position].id)
-            context.startActivity(intent)
+            onBtnClick.invoke(courses[position])
         }
         holder.itemView.setOnClickListener {
             onItemClick.invoke(courses[position])

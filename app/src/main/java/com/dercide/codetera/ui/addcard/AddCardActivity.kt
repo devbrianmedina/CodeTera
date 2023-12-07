@@ -2,6 +2,7 @@ package com.dercide.codetera.ui.addcard
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.widget.Toolbar
 import com.dercide.codetera.R
 
@@ -16,6 +17,11 @@ class AddCardActivity : AppCompatActivity() {
 
         // Configurar el botón de regreso
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val btnAdd:Button = findViewById(R.id.btnAddCard)
+        btnAdd.setOnClickListener {
+            finish()
+        }
     }
 
     // Puedes omitir este método si no necesitas personalizar el comportamiento de retroceso

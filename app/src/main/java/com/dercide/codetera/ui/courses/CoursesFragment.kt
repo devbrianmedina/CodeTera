@@ -36,11 +36,15 @@ class CoursesFragment : Fragment() {
         //recycler
         val rvCourses: RecyclerView = view.findViewById(R.id.rvCoursesFragmentCourses)
 
-        val adapter = CourseAdapter(MainActivity.courses, requireContext()) {
+        val adapter = CourseAdapter(MainActivity.courses, requireContext(), {
+            val intent = Intent(context, CourseActivity::class.java)
+            intent.putExtra("idCourse", it.id)
+            startActivity(intent)
+        },{
             val intent = Intent(requireContext(), CourseDetailsActivity::class.java)
             intent.putExtra("idCourse", it.id)
             startActivity(intent)
-        }
+        })
 
         val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 

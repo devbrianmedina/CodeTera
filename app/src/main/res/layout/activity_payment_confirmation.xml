@@ -53,4 +53,13 @@
         android:layout_marginTop="10dp"
         android:text="Detalles del Pago: $XX.XX\nFecha: dd/mm/yyyy" />
 
+    <Button
+        android:id="@+id/btnBackHomePaymetConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPaymentDetails"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Volver al inicio" />
+
 </RelativeLayout>
